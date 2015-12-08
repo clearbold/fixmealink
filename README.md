@@ -1,7 +1,7 @@
 # Fix Me a Link
 A Craft plugin with link utility functions.
 
-## Link Obfuscator for assets
+## Link Obfuscator for Assets Files
 
 Using the following Twig filter in your template:
 
