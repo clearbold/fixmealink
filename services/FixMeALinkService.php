@@ -61,7 +61,10 @@ class FixMeALinkService extends BaseApplicationComponent
             'params' => array(':hash'=>$hash),
         ))->queryRow();
 
-        return $row['link'];
+        if ( !$row )
+            return '404';
+        else
+            return $row['link'];
     }
 
     public function saveLink($str)
