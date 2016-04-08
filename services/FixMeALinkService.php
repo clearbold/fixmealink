@@ -43,7 +43,7 @@ class FixMeALinkService extends BaseApplicationComponent
         $asset_id = craft()->fixMeALink->getAssetId($hash);
 
         $assets = craft()->elements->getCriteria(ElementType::Asset);
-        $assetId = $asset_id;
+        $assets->id = $asset_id;
         $assets->limit = 1;
         $asset_name = 'file';
         foreach ($assets as $assetMatched)
