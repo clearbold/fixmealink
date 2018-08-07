@@ -1,0 +1,46 @@
+{
+    "name": "clearbold/fixmealink",
+    "description": "Fix Me a Link is a Craft plugin with link utility functions.",
+    "version": "1.0.0",
+    "type": "craft-plugin",
+    "homepage": "https://github.com/clearbold/fixmealink",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Reeves",
+            "homepage": "http://clearbold.com"
+        }
+    ],
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "twig",
+        "obfuscate",
+        "url"
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "clearbold\\fixmealink\\": "src/"
+        }
+    },
+    "support": {
+        "docs": "https://github.com/clearbold/fixmealink",
+        "source": "https://github.com/clearbold/fixmealink",
+        "issues": "https://github.com/clearbold/fixmealink"
+    },
+    "extra": {
+        "name": "Fix Me a Link",
+        "handle": "fixmealink",
+        "hasCpSettings": true,
+        "developer": "Clearbold",
+        "developerUrl": "http://clearbold.com/",
+        "changelogUrl": "https://raw.githubusercontent.com/clearbold/fixmealink/master/CHANGELOG.md",
+        "class": "clearbold\\fixmealink\\FixMeALinkService"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
