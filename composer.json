@@ -35,11 +35,11 @@
     "extra": {
         "name": "Fix Me a Link",
         "handle": "fixmealink",
-        "hasCpSettings": true,
+        "hasCpSettings": false,
         "developer": "Clearbold",
         "developerUrl": "http://clearbold.com/",
         "changelogUrl": "https://raw.githubusercontent.com/clearbold/fixmealink/master/CHANGELOG.md",
-        "class": "clearbold\\fixmealink\\FixMeALinkService"
+        "class": "clearbold\\fixmealink\\Fixmealink"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
