@@ -1,4 +1,4 @@
-# Fix Me a Link
+# Fix Me a Link for Craft 3
 A Craft plugin with link utility functions.
 
 ## Link Obfuscator for Assets Files
