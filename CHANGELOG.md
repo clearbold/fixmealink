@@ -1,3 +1,7 @@
+## 1.0.3 - 2018-08-08
+
+* Updated icon.svg.
+
 ## 1.0.2 - 2018-08-08
 
 * Added icon.svg.
