@@ -77,15 +77,18 @@ class FixmealinkService extends Component
 
     public function getAssetName($hash)
     {
-        // $asset_id = craft()->fixMeALink->getAssetId($hash);
-        // $assets = craft()->elements->getCriteria(ElementType::Asset);
-        // $assets->id = $asset_id;
-        // $assets->limit = 1;
-        // $asset_name = 'file';
-        // foreach ($assets as $assetMatched)
-        //     $asset_name = $assetMatched->filename;
-        // return $asset_name;
-        return '';
+        $FixmealinkRecord = new FixmealinkRecord();
+        // get record from DB
+        $FixmealinkRecord = FixmealinkRecord::find()
+            ->where(['hash' => $hash])
+            ->andWhere('assetId IS NOT NULL')
+            ->one();
+        if ($FixmealinkRecord) {
+            return $FixmealinkRecord->assetFilename;
+        }
+        else {
+            return '';
+        }
     }
 
     public function getLink($hash)
@@ -118,13 +121,16 @@ class FixmealinkService extends Component
     public function saveAssetLink($asset)
     {
         // TODO: Need to validate that this is in fact an asset
-        // $hash = md5($asset->url);
-        // craft()->db->createCommand()->insert('fixmealink_links', array(
-        //     'hash'=>$hash,
-        //     'link'=>$asset->url,
-        //     'asset_id'=>$asset->id
-        // ));
-        // return $hash;
+        $hash = md5($asset->url);
+        $fixmealinkRecord = new FixmealinkRecord;
+            $fixmealinkRecord->setAttribute('link', $asset->url);
+            $fixmealinkRecord->setAttribute('hash', $hash);
+            $fixmealinkRecord->setAttribute('assetId', $asset->id);
+            $fixmealinkRecord->setAttribute('assetFilename', $asset->filename);
+
+        $fixmealinkRecord->save();
+
+        return $hash;
     }
 
 }

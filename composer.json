@@ -1,7 +1,7 @@
 {
     "name": "clearbold/fixmealink",
     "description": "Fix Me a Link is a Craft plugin with link utility functions.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "craft-plugin",
     "homepage": "https://github.com/clearbold/fixmealink",
     "license": "MIT",

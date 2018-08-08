@@ -27,11 +27,11 @@ class FixmealinkController extends Controller
             return $this->redirect(Fixmealink::getInstance()->fixmealink->getLink($hash), 307);
         }
         else {
-            // $assetLink = Fixmealink::getInstance()->fixmealink->getAssetLink($hash);
-            // $data = file_get_contents($assetLink);
-            // header("Content-type: application/octet-stream");
-            // header("Content-disposition: attachment;filename=" . craft()->fixMeALink->getAssetName($hash));
-            // echo $data; exit;
+            $assetLink = Fixmealink::getInstance()->fixmealink->getAssetLink($hash);
+            $data = file_get_contents($assetLink);
+            header("Content-type: application/octet-stream");
+            header("Content-disposition: attachment;filename=" . Fixmealink::getInstance()->fixmealink->getAssetName($hash));
+            echo $data; exit;
         }
     }
 }

@@ -28,6 +28,7 @@ class Install extends Migration
                 'hash' => $this->string()->notNull(),
                 'link' => $this->string()->notNull(),
                 'assetId' => $this->integer()->defaultValue(0),
+                'assetFilename' => $this->string(),
                 'dateCreated' => $this->dateTime()->notNull(),
                 'dateUpdated' => $this->dateTime()->notNull(),
                 'uid' => $this->uid(),

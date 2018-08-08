@@ -53,17 +53,19 @@ class TwigExtensions extends \Twig_Extension
     }
 
     /**
-     * @param string $url // needs to be the asset
+     * @param Asset $url
      *
      * @return mixed|null|string|string[]
      */
-    public function obfuscateAssetUrlFilter(string $url)
+    public function obfuscateAssetUrlFilter($asset)
     {
         Fixmealink::getInstance()->fixmealink->cleanUpStaleLinks();
 
-        $url = 'fixed';
+        $obfuscated_link_hash = Fixmealink::getInstance()->fixmealink->saveAssetLink($asset);
 
-        return $url;
+        $obfuscated_link = UrlHelper::actionUrl('fixmealink/fixmealink/follow-link', array('hash' => $obfuscated_link_hash));
+
+        return $obfuscated_link;
     }
 
 }
