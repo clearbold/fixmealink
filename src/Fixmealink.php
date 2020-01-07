@@ -10,7 +10,7 @@ use craft\base\Plugin;
 use clearbold\fixmealink\twig\TwigExtensions;
 
 /**
- * CmTransactionalAdapter implements a Campaign Monitor Transactional Email transport adapter into Craft’s mailer.
+ * Fixmealink
  *
  * @author Mark Reeves, Clearbold, LLC <hello@clearbold.com>
  * @since 1.0

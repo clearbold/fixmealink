@@ -16,9 +16,7 @@ use clearbold\fixmealink\records\FixmealinkRecord;
 use yii\base\Event;
 
 /**
- * EntryCountService
- *
- * @property EntryQuery $entries
+ * FixmealinkService
  */
 class FixmealinkService extends Component
 {
